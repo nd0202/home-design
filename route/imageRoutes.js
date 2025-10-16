@@ -41,7 +41,7 @@ router.post('/upload', upload.single('image'), async (req, res) => {
 
 
 
-router.get('/get', async (req, res) => {
+router.get('/fetch', async (req, res) => {
   const images = await Image.find().sort({ uploadedAt: -1 });
   res.json(images);
 });
